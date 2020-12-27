@@ -3,13 +3,21 @@
 #include <unordered_map>
 #include <iostream>
 using namespace std;
+<<<<<<< HEAD
 string name[100'003];
+=======
+string name[100003];
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
 struct output_
 {
     bool flag = true;
     bool in;
     string id;
+<<<<<<< HEAD
 }output[100'003];
+=======
+}output[100003];
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
 unordered_map<string,string> um; 
 vector<string> solution(vector<string> record) 
 {
@@ -51,6 +59,7 @@ vector<string> solution(vector<string> record)
         answer.push_back(a);
     }
     return answer;
+<<<<<<< HEAD
 }
 int main()
 {
@@ -62,4 +71,6 @@ int main()
         record.push_back(a);
     }
     solution(record);
+=======
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
 }

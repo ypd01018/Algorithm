@@ -80,7 +80,11 @@ void chese_check()
                     }
                     else cnt++;
                 }
+<<<<<<< HEAD
                 if(cnt>=2) q.push({i,j});
+=======
+                if(cnt>=1) q.push({i,j});
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
             }
         }
     }
@@ -112,13 +116,27 @@ int main()
             if(mat[i][j]) chese++;
         }
     }
+<<<<<<< HEAD
 
     while(chese)
     {
+=======
+    int cache;
+    while(chese)
+    {
+        cache=chese;
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
         one_hour();
         //cout << endl;
         //print_test();
     }
+<<<<<<< HEAD
     cout << hour;
+=======
+    cout << hour<< endl;
+
+    cout << cache;
+
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
 
 }

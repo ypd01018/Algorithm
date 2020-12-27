@@ -4,7 +4,6 @@
 using namespace std;
 deque<int> dq[4];
 int k;
-
 void rotate(int num,int direct)
 {
     if(direct == -1)

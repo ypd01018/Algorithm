@@ -37,6 +37,7 @@ void sol()
              case '>':
                 if(iter!=lst.end()) iter++;
                 break;
+<<<<<<< HEAD
             case '-':
                 if(iter!=lst.begin() && lst.empty()!=1)
                 {
@@ -45,6 +46,16 @@ void sol()
                 }
                 break;
             default:
+=======
+             case '-':
+                if(iter!=lst.begin() && lst.empty()!=1)
+                {
+                    iter--;
+                    iter=lst.erase(iter);
+                }
+                break;
+             default:
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
                 iter=lst.insert(iter,i);
                 iter++;
                 break;

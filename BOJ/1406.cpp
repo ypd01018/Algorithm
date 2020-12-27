@@ -2,8 +2,11 @@
 #define endl '\n'
 #include<list>
 using namespace std;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
 int main()
 {
 	ios::sync_with_stdio(0);
@@ -41,7 +44,10 @@ int main()
 			iter++;
 		}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
 	}
 	for (iter2 = list1.begin(); iter2 != list1.end(); ++iter2)
 	{
@@ -49,4 +55,7 @@ int main()
 	}
 	
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c970bb23ae158ddb0c279d0af13d5172eedb711b
