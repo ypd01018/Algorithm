@@ -1,45 +1,28 @@
 #include<bits/stdc++.h>
 #define endl "\n"
 using namespace std;
-vector<int> coin;
-int N;
-
-void sol()
-{
-    set<int> m[2];
-    coin.clear();
-    
+int T=3,N,coin[101][2],dp[100010];
+int sol(){
     cin >> N;
-    for(int i=0;i<N;i++)
-    {
-        int n,val;
-        cin >> val >> n;
-        for(int j=0;j<n;j++)
-        {
-            coin.push_back(val);//최대 10만
+    int tot = 0;
+    for(int i=0;i<N;i++) {
+        cin >> coin[i][0] >> coin[i][1];
+        tot += coin[i][0] * coin[i][1];
+    }
+    if(tot%2) return 0;
+    memset(dp,0,sizeof(dp));
+    dp[0] = 1;
+    for(int i=0;i<N;i++){
+        for(int j=tot/2;j>=0;j--){
+            if(!dp[j]) continue;
+            for(int k=1;k<=coin[i][1];k++){
+                dp[j+coin[i][0]*k]=1;
+            }
         }
     }
-    m[0].insert(coin[0]); m[0].insert(-1*coin[0]);
-
-    set<int>::iterator j;
-
-    for(int i=1;i<coin.size();i++)
-    {
-        for(j=m[(i+1)%2].begin();j!=m[(i+1)%2].end();j++)
-        {
-            int val = *j;
-            m[(i+2)%2].insert(val+coin[i]); m[(i+2)%2].insert(val-coin[i]);
-        }
-        m[(i+1)%2].clear();
-    }
-
-    j=m[(coin.size()+1)%2].find(0);
-    if(j==m[(coin.size()+1)%2].end()) cout << 0;
-    else cout << 1;
-    cout << endl;
+    return dp[tot/2];
 }
-
-int main()
-{
-    for(int i=0;i<3;i++) sol();
+int main(){
+    ios::sync_with_stdio(0);cin.tie(0);
+    while(T--) cout << sol() << endl;
 }
