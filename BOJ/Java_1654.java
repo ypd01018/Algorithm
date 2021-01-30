@@ -1,4 +1,3 @@
-package BOJ;
 
 import java.util.*;
 
