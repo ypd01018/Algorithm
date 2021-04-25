@@ -16,7 +16,7 @@ int main()
         int a,b,c;
         cin >> a >> b >> c;
         v[a].push_back({b,c});
-        if(a==K) pq.push({-1*c,b});
+        if(a==K) pq.push({-1*c,b});_
     }
     memset(dis,-1,sizeof(dis));
     while(!pq.empty())
